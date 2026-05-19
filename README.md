@@ -1,4 +1,3 @@
-# Bookmark Notes
 
 Bookmark Notes is a Chrome extension for managing your bookmarks with personal notes. Each bookmark gets its own dedicated notes page, so you can save thoughts, copied text, research snippets, reminders, or anything important from that page.
 
