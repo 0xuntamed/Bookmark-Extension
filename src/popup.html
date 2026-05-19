@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bookmark Notes</title>
+    <link rel="stylesheet" href="./popup.css">
+  </head>
+  <body>
+    <main class="popup-shell">
+      <header class="popup-header">
+        <div>
+          <h1>Bookmark Notes</h1>
+          <p id="bookmarkCount">Loading bookmarks</p>
+        </div>
+        <button class="icon-button" id="refreshButton" type="button" title="Refresh bookmarks" aria-label="Refresh bookmarks">
+          <span aria-hidden="true">R</span>
+        </button>
+      </header>
+
+      <section class="current-page" id="currentPage" hidden>
+        <div class="current-copy">
+          <span class="eyebrow">Current page</span>
+          <strong id="currentTitle">Untitled page</strong>
+          <small id="currentUrl"></small>
+        </div>
+        <div class="button-row">
+          <button id="currentNotesButton" type="button">Notes</button>
+          <button id="saveSelectionButton" type="button">Save selection</button>
+        </div>
+      </section>
+
+      <label class="search-box">
+        <span>Search</span>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="Title, URL, folder">
+      </label>
+
+      <p class="status" id="statusLine" role="status"></p>
+      <div class="bookmark-list" id="bookmarkList" aria-live="polite"></div>
+    </main>
+
+    <script type="module" src="./popup.js"></script>
+  </body>
+</html>

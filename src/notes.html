@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bookmark Notes</title>
+    <link rel="stylesheet" href="./notes.css">
+  </head>
+  <body>
+    <main class="notes-shell">
+      <header class="topbar">
+        <div class="bookmark-heading">
+          <span class="eyebrow">Bookmark</span>
+          <h1 id="bookmarkTitle">Loading</h1>
+          <a id="bookmarkUrl" href="#" target="_blank" rel="noreferrer"></a>
+        </div>
+        <div class="top-actions">
+          <button id="openBookmarkButton" type="button">Open bookmark</button>
+          <button class="secondary" id="copyNotesButton" type="button">Copy notes</button>
+        </div>
+      </header>
+
+      <p class="status" id="statusLine" role="status"></p>
+
+      <section class="editor-grid">
+        <section class="note-panel" aria-labelledby="personalNotesLabel">
+          <div class="section-heading">
+            <h2 id="personalNotesLabel">Personal notes</h2>
+            <span id="saveState">Saved</span>
+          </div>
+          <textarea id="personalNotes" spellcheck="true" placeholder="Write your notes here"></textarea>
+        </section>
+
+        <aside class="snippet-panel" aria-labelledby="savedTextLabel">
+          <div class="section-heading">
+            <h2 id="savedTextLabel">Saved text</h2>
+            <span id="snippetCount">0</span>
+          </div>
+          <form class="snippet-form" id="snippetForm">
+            <textarea id="snippetInput" rows="5" placeholder="Paste important text"></textarea>
+            <button type="submit">Add text</button>
+          </form>
+          <div class="snippet-list" id="snippetList"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script type="module" src="./notes.js"></script>
+  </body>
+</html>
